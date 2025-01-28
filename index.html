@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <title>Utkalspace</title>
+  <meta name="description" content="UtkalSpace: Your one-stop shop for finding your dream home in Bhubaneswar, Odisha. Explore our listings of apartments, villas, and plots. Browse properties, connect with agents, and schedule viewings. Start your real estate journey today!">
+
+  <meta name="google-signin-client_id" content="84390854910-j1gqser5nen58v8cimesh6rnec4kc4kt.apps.googleusercontent.com" />
+  <meta name="google-site-verification" content="vw31VAMC_y0bOVafK10nZd06R64wxxNUIwxuNSOsc0g" />
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="utkalspace3">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="x-icon" href="favicon.ico"/>
+
+  <title>UtkalSpace:Rent,Buy,Sell Residential and Commercial</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    const serviceWorkerVersion = "4027487516";
+  </script>
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
+</head>
+<body>
+    <div class="loading" id="loading">
+        <style>
+            .loading {
+                position: absolute;
+                top: 43%;
+                left: 47%;
+                 /* Transform origin at the center to ensure rotation happens around the middle */
+                transform: translate(-50%, -50%);
+                width: 80px;
+                height: 80px;
+                border: 5px solid #FFFFFF;
+                border-radius: 70%;
+                border-top: 5px solid #0080FF;
+                animation: spin 1s linear infinite;
+            }
+            @keyframes spin{
+                0% {transform: rotate(0deg);}
+                100% {transform: rotate(360deg);}
+            }
+        </style>
+  <script>
+    window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      let loading = document.querySelector('#loading');
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            loading.remove();
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js"></script>
+  <!-- Firebase auth SDK-->
+  <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js"></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyCvupVNz4ME-0wwlQpdxgIFJmWL1EgE6Cs",
+        authDomain: "utkalspace3.firebaseapp.com",
+        projectId: "utkalspace3",
+        storageBucket: "utkalspace3.appspot.com",
+        messagingSenderId: "84390854910",
+        appId: "1:84390854910:web:0d29c839f999050ca9e5af",
+        measurementId: "G-RWFWX055CB"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+</body>
+</html>
